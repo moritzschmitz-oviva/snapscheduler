@@ -84,8 +84,6 @@ metrics:
   # Disable auth checks when scraping metrics (allow anyone to scrape)
   disableAuth: false
 
-manageCRDs: true
-
 # See https://kubernetes.io/blog/2023/01/12/
 #        protect-mission-critical-pods-priorityclass/
 priorityClassName: ""

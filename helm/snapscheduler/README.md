@@ -153,9 +153,6 @@ case, the defaults, shown below, should be sufficient.
   - Overrides the container image pull policy
 - `imagePullSecrets`: none
   - May be set if pull secret(s) are needed to retrieve the operator image
-- `manageCRDs`: `true`
-  - Whether the chart should automatically install, upgrade, or remove the
-    SnapshotSchedule CRD
 - `rbacProxy.image.repository`: `quay.io/brancz/kube-rbac-proxy`
   - Specifies the container image used for the RBAC proxy
 - `rbacProxy.image.tag`: (see values file for default tag)

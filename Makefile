@@ -98,10 +98,8 @@ manifests: controller-gen ## Generate WebhookConfiguration, ClusterRole and Cust
 	$(CONTROLLER_GEN) rbac:roleName=manager-role crd webhook paths="./..." output:crd:artifacts:config=config/crd/bases
 	@{ \
 	for SRC in config/crd/bases/*.yaml; do \
-		DST="helm/snapscheduler/templates/$$(basename "$$SRC")"; \
-		echo "{{- if .Values.manageCRDs }}" > "$$DST"; \
+		DST="helm/snapscheduler/crds/$$(basename "$$SRC")"; \
 		cat "$$SRC" >> "$$DST"; \
-		echo "{{- end }}" >> "$$DST"; \
 	done; \
 	}
 
